@@ -6,32 +6,25 @@
     <title>repl.it</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
     <link href="components.css" rel="stylesheet" type="text/css" />
-    <!-- LeafletJS CSS file -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
-    <!-- LeafletJS JS file (must place after Leaflet's CSS file) -->
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
-
     <script src="components.js"></script>
     <script src="script.js"></script>
    </head>
-   
   <body onload="init()">
     <div id="banner" class="container center">
       <h1> Complaint Locations </h1>
     </div>
     <div class="container subbanner">
       <div>
-        <p>This classwork challenges students to display static maps for locations of complaints made through <a href="https://data.cityofnewyork.us/Social-Services/311-Service-Requests-from-2010-to-Present/erm2-nwe9" target="_blank">311 Service Request</a> calls from NYC Open Data. Map functionality is provided through <a href="https://leafletjs.com/examples/quick-start/" target="_blank">LeafletJS</a>.  Students will practice using information retrieved from one RESTful API call as the parameters to another JS library.  The latitude and longitude information of a complaint retrieved from NYC Open Data will be used with LeafletJS to create a map of the complaint.
        </div>
     </div>
     <div class="container">
     <input style="flex:1;text-align:right;" type="text" id="borough" placeholder="Enter borough" value="QUEENS"> &nbsp; <a class="button" onclick="getComplaints()"> View </a>
     </div>
     <div id="output" class="container" >
-
     </div>
     <div id="footer" class="container center">
-      <h3>Lesson 55 Practical B</h3>
     </div>  
   </body>
 </html>
