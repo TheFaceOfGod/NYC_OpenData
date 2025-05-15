@@ -1,7 +1,7 @@
 let data;
 
 async function init(){
-  let link = "https://data.cityofnewyork.us/resource/erm2-nwe9.json?$limit=100";
+  let link = "https://data.cityofnewyork.us/resource/8m42-w767.json";
   info = await fetch(link);
   data = await info.json();
   alert("Data loaded");
@@ -26,7 +26,7 @@ function getComplaints(){
       let flipcard = new FlipCard(front, back);
       flipcard.render("output");
       
-      //Produce Map after the div for the map on the flipcard is rendered
+    
       showMap(complaint.latitude,complaint.longitude,complaint.unique_key )
 
     }
@@ -41,5 +41,5 @@ function showMap(lat,lon,id){
     attribution: "&copy; <a href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a>"
   }).addTo(map);
 
-  let marker = L.marker(location).addTo(map);// ******** places marker on map
+  let marker = L.marker(location).addTo(map);
 } 
