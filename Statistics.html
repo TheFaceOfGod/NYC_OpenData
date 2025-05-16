@@ -3,39 +3,35 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>Australia</title>
+    <title>Fire Incident Project</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
-  </head>
-  <body id="home">
-	<div id="bar">
-      <h1>Australia Home Page</h1>
+    <link href="components.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script src="components.js"></script>
+    <script src="script.js"></script>
+   </head>
+  <body onload="init()">
+    <nav class="container">
+      <a href="https://data.cityofnewyork.us/Public-Safety/Fire-Incident-Dispatch-Data/8m42-w767/data_preview">Website for data</a>
+      <a href="index.html">Home</a>
+      <a href="Information.html">Information</a>
+      <a href="Statistics.html">Statistics</a>
+    </nav>
+    <div id="banner" class="container center">
+      <h1></h1>
     </div>
-	<div id="bar">
-	  <a href="index.html">-|Home Page|-</a>
-	  <a href="ecosystems.html">-|Animals|-</a>
-      <a href="cities.html">-|Famous Cities|-</a>
-	  <a href="people.html">-|Famous People|-</a>
-	</div>
-	<h1 id="big">Australia</h1>
-	<div id="mainhome">
-		<p>Australia, officially the Commonwealth of Australia, is a country comprising the mainland of the Australian continent, the island of Tasmania and numerous smaller islands. Australia has a total area of 7,688,287 sq km (2,968,464 sq mi), making it the sixth-largest country in the world and the largest country by area in Oceania. It is the world's oldest, flattest, and driest inhabited continent, with some of the least fertile soils. It is a megadiverse country, and its size gives it a wide variety of landscapes and climates including deserts in the interior and tropical rainforests along the coast.</p>
-		<img width="600px" height="300px" src="images/australianflag.png">
-	</div>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<div id="bar">
-		<p>Sources</p>
-		<div id="source">
-			<a href="https://en.wikipedia.org/wiki/Australia" target="_blank">https://en.wikipedia.org/wiki/Australia</a>
-		</div>
-	</div>
+    <div class="container subbanner">
+      <div>
+       </div>
+    </div>
+    <div class="container">
+    <input style="flex:1;text-align:right;" type="text" id="borough" placeholder="Enter borough" value="QUEENS"> &nbsp; <a class="button" onclick="getComplaints()"> View </a>
+    </div>
+    <div id="output" class="container" >
+    </div>
+    <div id="footer" class="container center">
+      <p class="small">(we started the fire)</p>
+    </div>  
   </body>
 </html>
