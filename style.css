@@ -13,7 +13,7 @@ html,body{
 }
 
 nav{
-  background-color:red;
+  background-color:#B22222;
 }
 nav a{
   color:black;
@@ -33,7 +33,7 @@ nav a:hover{
   color:white;
 }
 #footer{
-  background-color:cornflowerblue;
+  background-color:#B22222;
   color:white;
   left: 0;
   right: 0;
