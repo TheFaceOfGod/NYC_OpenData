@@ -17,9 +17,6 @@ function showMap(lat,lon,id){
 
   let marker = L.marker(location).addTo(map);
 } 
-function {
-	
-}
 function FireIncident(){
   let bx = 0, br = 0, t = 0, q = 0, m = 0, si = 0;
   for( let i = 0; i < data.length; i++ ){
