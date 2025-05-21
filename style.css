@@ -39,7 +39,11 @@ nav a:hover{
   right: 0;
   bottom:0px;
 }
- 
+#home{
+	background-image:url(i/brickwall.jpeg);
+	background-size:cover;
+	background-repeat:no-repeat;
+}
 .card{
   flex:1;
   margin:10px;
