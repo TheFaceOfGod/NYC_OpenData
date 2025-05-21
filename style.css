@@ -5,8 +5,7 @@ html,body{
 .container{
   display:flex;
   padding:10px;
-  flex-wrap:wrap;
-  background-color:gray;
+  flex-wrap:wrap;;
 }
 .center{
   justify-content:center;
