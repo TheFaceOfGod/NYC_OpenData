@@ -1,4 +1,4 @@
-let data;
+let data, info, output;
 
 async function init(){
   let link = "https://data.cityofnewyork.us/resource/8m42-w767.json";
