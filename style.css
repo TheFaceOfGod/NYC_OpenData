@@ -6,6 +6,7 @@ html,body{
   display:flex;
   padding:10px;
   flex-wrap:wrap;
+  background-color:gray;
 }
 .center{
   justify-content:center;
