@@ -39,8 +39,6 @@ const geocodeWithNominatim = async (address) => {
 
     if (results.length > 0) {
       const { lat, lon } = results[0];
-      console.log(`Latitude: ${lat}, Longitude: ${lon}`);
-      return [lat,lon];
     } else {
       console.log('No results found.');
     }
