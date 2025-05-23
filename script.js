@@ -10,10 +10,9 @@ let map;
 async function displayLocation(){
   let lat;
   let lon;
-  let location = [lat, lon];
   let address = document.getElementById("address");  
   if(address.value != ""){
-    location = await geocodeWithNominatim(address.value);
+    let location = await geocodeWithNominatim(address.value);
   }
   showMap(location);
 }
@@ -38,7 +37,6 @@ const geocodeWithNominatim = async (address) => {
     const results = await response.json();
 
     if (results.length > 0) {
-      const { lat, lon } = results[0];
     } else {
       console.log('No results found.');
     }
