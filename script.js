@@ -10,9 +10,10 @@ let map;
 async function displayLocation(){
   let lat;
   let lon;
+  let location = [lat, lon];
   let address = document.getElementById("address");  
   if(address.value != ""){
-    let location = await geocodeWithNominatim(address.value);
+    location = await geocodeWithNominatim(address.value);
   }
   showMap(location);
 }
