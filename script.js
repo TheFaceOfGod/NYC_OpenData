@@ -8,6 +8,9 @@ async function init(){
 }
 let map;
 async function displayLocation(){
+  let lat;
+  let lon;
+  let location = [lat, lon];
   let address = document.getElementById("address");  
   if(address.value != ""){
     location = await geocodeWithNominatim(address.value);
@@ -29,10 +32,15 @@ function showMap(location){
 const geocodeWithNominatim = async (address) => {
   const encoded = encodeURIComponent(address);
   const url = `https://nominatim.openstreetmap.org/search?q=${encoded}&format=json`;
+
   try {
     const response = await fetch(url);
     const results = await response.json();
+
     if (results.length > 0) {
+      const { lat, lon } = results[0];
+      console.log(`Latitude: ${lat}, Longitude: ${lon}`);
+      return [lat,lon];
     } else {
       console.log('No results found.');
     }
