@@ -6,11 +6,7 @@ async function init(){
   data = await info.json();
   alert("Data loaded");
 }
-///////////////
-
-let data;
 let map = undefined;
-
 async function displayLocation(){
   let lat = document.getElementById("lat").value;
   let lon = document.getElementById("lon").value;
@@ -20,18 +16,13 @@ async function displayLocation(){
   if(address.value != ""){
     location = await geocodeWithNominatim(address.value);
   }
-  
   showMap(location);
 }
-
-
-
 function showMap(location){	
   if (map) {
     map.remove();
   }
   map = L.map("map").setView(location, 14);
-
   const tiles = L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
     maxZoom: 18,
     attribution: "&copy; <a href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a>"
@@ -39,15 +30,12 @@ function showMap(location){
 
   let marker = L.marker(location).addTo(map);
 }     
-
 const geocodeWithNominatim = async (address) => {
   const encoded = encodeURIComponent(address);
   const url = `https://nominatim.openstreetmap.org/search?q=${encoded}&format=json`;
-
   try {
     const response = await fetch(url);
     const results = await response.json();
-
     if (results.length > 0) {
       const { lat, lon } = results[0];
       console.log(`Latitude: ${lat}, Longitude: ${lon}`);
@@ -59,7 +47,6 @@ const geocodeWithNominatim = async (address) => {
     console.error('Error:', err);
   }
 };
-///////////////
 function FireIncident(){
   let bx = 0, br = 0, t = 0, q = 0, m = 0, si = 0;
   for( let i = 0; i < data.length; i++ ){
