@@ -6,6 +6,7 @@ async function init(){
   data = await info.json();
   alert("Data loaded");
 }
+let map;
 async function displayLocation(){
   let address = document.getElementById("address");  
   if(address.value != ""){
