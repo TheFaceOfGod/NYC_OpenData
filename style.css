@@ -44,6 +44,12 @@ nav a:hover{
 	background-size:cover;
 	background-repeat:no-repeat;
 }
+#map{
+  flex:1;
+  height:400px;
+  border-radius:10px;
+  box-shadow:2px 2px 2px black;
+}
 .card{
   flex:1;
   margin:10px;
