@@ -6,12 +6,7 @@ async function init(){
   data = await info.json();
   alert("Data loaded");
 }
-let map = undefined;
 async function displayLocation(){
-  let lat = document.getElementById("lat").value;
-  let lon = document.getElementById("lon").value;
-  let location = [lat, lon];
-  // if user inputs address
   let address = document.getElementById("address");  
   if(address.value != ""){
     location = await geocodeWithNominatim(address.value);
@@ -37,9 +32,6 @@ const geocodeWithNominatim = async (address) => {
     const response = await fetch(url);
     const results = await response.json();
     if (results.length > 0) {
-      const { lat, lon } = results[0];
-      console.log(`Latitude: ${lat}, Longitude: ${lon}`);
-      return [lat,lon];
     } else {
       console.log('No results found.');
     }
