@@ -8,8 +8,8 @@ async function init(){
 }
 let map = undefined;
 async function displayLocation(){
-  let lat="";
-  let lon="";
+  let lat = document.getElementById("lat").value;
+  let lon = document.getElementById("lon").value;
   let location = [lat, lon];
   let address = document.getElementById("address");  
   if(address.value != ""){
