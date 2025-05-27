@@ -6,10 +6,10 @@ async function init(){
   data = await info.json();
   alert("Data loaded");
 }
-let map;
+let map = undefined;
 async function displayLocation(){
-  let lat;
-  let lon;
+  let lat = document.getElementById("lat").value;
+  let lon = document.getElementById("lon").value;
   let location = [lat, lon];
   let address = document.getElementById("address");  
   if(address.value != ""){
@@ -26,7 +26,6 @@ function showMap(location){
     maxZoom: 18,
     attribution: "&copy; <a href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a>"
   }).addTo(map);
-
   let marker = L.marker(location).addTo(map);
 }     
 const geocodeWithNominatim = async (address) => {
@@ -38,7 +37,9 @@ const geocodeWithNominatim = async (address) => {
     const results = await response.json();
 
     if (results.length > 0) {
-	const { lat, lon } = results[0];
+      const { lat, lon } = results[0];
+      console.log(`Latitude: ${lat}, Longitude: ${lon}`);
+      return [lat,lon];
     } else {
       console.log('No results found.');
     }
