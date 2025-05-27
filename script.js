@@ -34,7 +34,7 @@ function showMap(location){
 	build += `	   <hr>`;
 	build += `     <p>Location: ${complaint.incident_borough}</p>`;
 	build += `     <h4>${complaint.incident_borough}</h4>`;
-    build += `</div>`
+    build += `</div>`;
     }
   }
 }     
