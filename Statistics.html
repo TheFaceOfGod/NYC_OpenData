@@ -36,7 +36,12 @@
      </select>
     </div>
     <div class="container card">
-      <input id="zipcode" type="text" placeholder="Enter Zipcode">
+      <select id="alarm" style="width:100px;">
+        <option value="phone">Phone</option>
+        <option value="pd">PD Link/Medical</option>
+        <option value="firea">Private Fire Alarm</option>
+        <option value="ems">EMS Link/Medical</option>
+      </select>
       <input type="button" value="Show Chart" onclick="FireIncident()">
     </div>
     <div id="chart" class="container" >
