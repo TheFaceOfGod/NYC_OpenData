@@ -6,20 +6,6 @@ async function init(){
   data = await info.json();
   alert("Data loaded");
 }
-for(let i = 0; i < data.length; i++){
-    let complaint = data[i];
-	let lat = complaint.latitude;
-	let lon = complaint.longitude;
-    build += `<div class="fitted card">`;
-    build += `     <h3>${complaint.complaint_type}</h3>`;    
-	build += `	   <hr>`;
-	build += `     <p>Location: ${complaint.incident_address}</p>`;
-	build += `     <h4>${complaint.borough}</h4>`;
-	if(lat && lon){
-        build += `<input type='button' value='Map' onclick="showMap( ${lat},${lon} )">`;
-    }
-    build += `</div>`;
-  }
 let map = undefined;
 async function displayLocation(){
   let lat = document.getElementById("lat").value;
@@ -41,6 +27,16 @@ function showMap(location){
     attribution: "&copy; <a href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a>"
   }).addTo(map);
   let marker = L.marker(location).addTo(map);
+  for(let i = 0; i < data.length; i++){
+    let complaint = data[i];
+    build += `<div class="fitted card">`;
+    build += `     <h3>${complaint.incident_borough}</h3>`;    
+	build += `	   <hr>`;
+	build += `     <p>Location: ${complaint.incident_borough}</p>`;
+	build += `     <h4>${complaint.incident_borough}</h4>`;
+    build += `</div>`
+    }
+  }
 }     
 const geocodeWithNominatim = async (address) => {
   const encoded = encodeURIComponent(address);
