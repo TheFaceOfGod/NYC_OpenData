@@ -35,7 +35,7 @@ function showMap(location){
 	build += `     <p>Location: ${complaint.incident_borough}</p>`;
 	build += `     <h4>${complaint.incident_borough}</h4>`;
     build += `</div>`;
-    }
+  }
 }     
 const geocodeWithNominatim = async (address) => {
   const encoded = encodeURIComponent(address);
