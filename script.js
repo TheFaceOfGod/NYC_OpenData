@@ -35,6 +35,7 @@ function showMap(location){
     build += `     <h4>${complaint.incident_borough}</h4>`;
     build += `</div>`;
   }
+  output.innerHTML=build
 }     
 const geocodeWithNominatim = async (address) => {
   const encoded = encodeURIComponent(address);
@@ -55,7 +56,7 @@ const geocodeWithNominatim = async (address) => {
 };
 function FireIncident(){
   let bx = 0, br = 0, t = 0, q = 0, m = 0, si = 0;
-  let alarm = document.getElementById("alarm");
+  let alarm = document.getElementById("alarm").value;
   for( let i = 0; i < data.length; i++ ){
     if ( data[i].alarm_box_borough == "BRONX" && data[i].alarm_source_description_tx == alarm) {
       bx++;
