@@ -17,6 +17,7 @@ async function displayLocation(){
   showMap(location);
 }
 function showMap(location){	
+  let output = document.getElementById("output")
   if (map) {
     map.remove();
   }
@@ -27,7 +28,6 @@ function showMap(location){
   }).addTo(map);
   let marker = L.marker(location).addTo(map);
   for(let i = 0; i < data.length; i++){
-    let output = document.getElementById("output");
     let complaint = data[i];
     build += `<div class="fitted card">`;
     build += `     <h3>${complaint.incident_borough}</h3>`;    
