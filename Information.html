@@ -30,9 +30,16 @@
     <div class="container">
     </div>
     <div id="output" class="container" >
-      <input style="font-size:1px;text-align:right;" type="text" id="lat"> &nbsp; 
-      <input style="font-size:1px;text-align:right;" type="text" id="lon"> &nbsp;
+      <input style="font-size:1px;width:1px;text-align:right;" type="text" id="lat"> &nbsp; 
+      <input style="font-size:1px;width:1px;text-align:right;" type="text" id="lon"> &nbsp;
       <input style="flex:1000;text-align:center;" type="text" id="address" placeholder="Enter Address" &nbsp>
+      <select id="address" style="width:100px;">
+        <option value="RICHMOND / STATEN ISLAND">RICHMOND / STATEN ISLAND</option>
+        <option value="BROOKLYN">BROOKLYN</option>
+        <option value="BRONX">BRONX</option>
+        <option value="QUEENS">QUEENS</option>
+        <option value="MANHATTAN">MANHATTAN</option>
+      </select>
       <input type="button" onclick="displayLocation()" value="View">
     </div>
     <div id="output"></div>
