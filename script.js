@@ -56,7 +56,7 @@ const geocodeWithNominatim = async (address) => {
 };
 function FireIncident(){
   let bx = 0, br = 0, t = 0, q = 0, m = 0, si = 0;
-  let alarm = document.getElementById("alarm").value;
+  let alarm = document.getElementById("alarm");
   for( let i = 0; i < data.length; i++ ){
     if ( data[i].alarm_box_borough == "BRONX" && data[i].alarm_source_description_tx == alarm) {
       bx++;
