@@ -1,4 +1,4 @@
-let data, info, output, build;
+let data, info, build;
 
 async function init(){
   let link = "https://data.cityofnewyork.us/resource/8m42-w767.json?$limit=1000";
@@ -27,6 +27,7 @@ function showMap(location){
   }).addTo(map);
   let marker = L.marker(location).addTo(map);
   for(let i = 0; i < data.length; i++){
+    let output = document.getElementById("output");
     let complaint = data[i];
     build += `<div class="fitted card">`;
     build += `     <h3>${complaint.incident_borough}</h3>`;    
