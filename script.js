@@ -59,15 +59,15 @@ function FireIncident(){
   let bx = 0, br = 0, t = 0, q = 0, m = 0, si = 0;
   let alarm = document.getElementById("alarm").value;
   for( let i = 0; i < data.length; i++ ){
-    if ( data[i].alarm_box_borough == "BRONX" && data[i].alarm_source_description_tx == alarm) {
+    if ( data[i].alarm_box_borough == "BRONX" && data[i].alarm_source_description_tx == "alarm") {
       bx++;
-    }else if ( data[i].alarm_box_borough == "BROOKLYN" && data[i].alarm_source_description_tx == alarm) {
+    }else if ( data[i].alarm_box_borough == "BROOKLYN" && data[i].alarm_source_description_tx == "alarm") {
       br++;
-    }else if ( data[i].alarm_box_borough == "QUEENS" && data[i].alarm_source_description_tx == alarm) {
+    }else if ( data[i].alarm_box_borough == "QUEENS" && data[i].alarm_source_description_tx == "alarm") {
       q++;
-    }else if ( data[i].alarm_box_borough == "MANHATTAN" && data[i].alarm_source_description_tx == alarm) {
+    }else if ( data[i].alarm_box_borough == "MANHATTAN" && data[i].alarm_source_description_tx == "alarm") {
       m++;
-    }else if ( data[i].alarm_box_borough == "RICHMOND / STATEN ISLAND" && data[i].alarm_source_description_tx == alarm) {
+    }else if ( data[i].alarm_box_borough == "RICHMOND / STATEN ISLAND" && data[i].alarm_source_description_tx == "alarm") {
       si++;
     }
   }
