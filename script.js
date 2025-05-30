@@ -30,12 +30,12 @@ function showMap(location){
   for(let i = 0; i < data.length; i++){
     let complaint = data[i];
     if(complaint.incident_borough = address){
-    build += `<div class="fitted card">
+      build += `<div class="fitted card">
                   <h3>${complaint.incident_borough}</h3>    
                   <hr>
                   <p>Location: ${complaint.incident_borough}</p>
                   <h4>${complaint.incident_borough}</h4>
-              </div>`
+                </div>`
     }
    output.innerHTML=build;
   }
