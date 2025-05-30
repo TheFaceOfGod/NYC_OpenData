@@ -1,5 +1,3 @@
-let data, info, build;
-
 async function init(){
   let link = "https://data.cityofnewyork.us/resource/8m42-w767.json?$limit=1000";
   info = await fetch(link);
