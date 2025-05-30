@@ -44,6 +44,11 @@ nav a:hover{
 	background-size:cover;
 	background-repeat:no-repeat;
 }
+#home2{
+	background-image:url(i/westartedthefire.jpg);
+	background-size:cover;
+	background-repeat:no-repeat;
+}
 #map{
   flex:1;
   height:400px;
