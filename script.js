@@ -32,7 +32,7 @@ function showMap(location){
                   <h3>Borough:${complaint.incident_borough}</h3>    
                   <p>Incident:${complaint.incident_classification}</p>
                   <h4>Location of alarm:${complaint.alarm_box_location}</h4>
-                </div>`
+                </div>`;
     }
    output.innerHTML=build;
   }
