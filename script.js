@@ -32,28 +32,12 @@ function showMap(location){
     if(complaint.incident_borough = address){
           <div class="container">
     </div>
-    build += `<div id="output" class="container" >
-                  <input style="font-size:1px;width:1px;text-align:right;" type="text" id="lat"> &nbsp; 
-                  <input style="font-size:1px;width:1px;text-align:right;" type="text" id="lon"> &nbsp;
-                  <select id="address" style="width:100px;flex:1000;text-align:center;">&nbsp;
-                    <option value="RICHMOND / STATEN ISLAND">RICHMOND / STATEN ISLAND</option>
-                    <option value="BROOKLYN">BROOKLYN</option>
-                    <option value="BRONX">BRONX</option>
-                    <option value="QUEENS">QUEENS</option>
-                    <option value="MANHATTAN">MANHATTAN</option>
-                  </select>
-                  <input type="button" onclick="displayLocation()" value="View">
-                </div>
-                <div style="display:flex; flex:1">
-                  <div style="display:flex; flex:1;" id="output"></div>
-                  <div style="display:flex; flex:1;" id="map"></div>
-                </div>
-                <div class="fitted card">
+    build += `<div class="fitted card">
                   <h3>${complaint.incident_borough}</h3>    
                   <hr>
                   <p>Location: ${complaint.incident_borough}</p>
                   <h4>${complaint.incident_borough}</h4>
-                </div>`
+              </div>`
     }
    output.innerHTML=build;
   }
