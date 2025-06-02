@@ -37,18 +37,6 @@ function showMap(location){
                   <h4>Location of alarm:${complaint.alarm_box_location}</h4>
                 </div>`;
     }
-     output2.innerHTML=`<div id="output2" class="container" >
-                        <input style="font-size:1px;width:1px;text-align:right;" type="text" id="lat"> &nbsp; 
-                        <input style="font-size:1px;width:1px;text-align:right;" type="text" id="lon"> &nbsp;
-                        <select id="address" style="width:100px;flex:1000;text-align:center;">&nbsp;
-                          <option value="RICHMOND / STATEN ISLAND">RICHMOND / STATEN ISLAND</option>
-                          <option value="BROOKLYN">BROOKLYN</option>
-                          <option value="BRONX">BRONX</option>
-                          <option value="QUEENS">QUEENS</option>
-                          <option value="MANHATTAN">MANHATTAN</option>
-                        </select>
-                        <input type="button" onclick="displayLocation()" value="View">
-                      </div>`
     output.innerHTML=build;
   }
 }     
