@@ -29,7 +29,19 @@ function showMap(location){
   for(let i = 0; i < data.length; i++){
     let complaint = data[i];
     if(complaint.incident_borough = address){
-      build += `<div class="fitted card">
+      build += `<div id="output" class="container" >
+                  <input style="font-size:1px;width:1px;text-align:right;" type="text" id="lat"> &nbsp; 
+                  <input style="font-size:1px;width:1px;text-align:right;" type="text" id="lon"> &nbsp;
+                  <select id="address" style="width:100px;flex:1000;text-align:center;">&nbsp;
+                    <option value="RICHMOND / STATEN ISLAND">RICHMOND / STATEN ISLAND</option>
+                    <option value="BROOKLYN">BROOKLYN</option>
+                    <option value="BRONX">BRONX</option>
+                    <option value="QUEENS">QUEENS</option>
+                    <option value="MANHATTAN">MANHATTAN</option>
+                  </select>
+                  <input type="button" onclick="displayLocation()" value="View">
+                </div>
+                <div class="fitted card">
                   <h3>Borough:${complaint.alarm_box_borough}</h3>    
                   <p>Incident:${complaint.incident_classification}</p>
                   <h4>Location of alarm:${complaint.alarm_box_location}</h4>
