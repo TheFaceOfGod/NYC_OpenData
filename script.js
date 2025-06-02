@@ -38,7 +38,7 @@ function showMap(location){
                 </div>`;
     }
    output.innerHTML=build;
-   output2.innerHTML=`<div id="output" class="container" >
+   output2.innerHTML=`<div id="output2" class="container" >
                         <input style="font-size:1px;width:1px;text-align:right;" type="text" id="lat"> &nbsp; 
                         <input style="font-size:1px;width:1px;text-align:right;" type="text" id="lon"> &nbsp;
                         <select id="address" style="width:100px;flex:1000;text-align:center;">&nbsp;
