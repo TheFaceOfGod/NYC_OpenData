@@ -17,7 +17,7 @@ async function displayLocation(){
 }
 function showMap(location){	
   let output = document.getElementById("output")
-  let address = document.getElementById("address");  
+  let address = document.getElementById("address")
   if (map) {
     map.remove();
   }
