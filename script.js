@@ -4,7 +4,7 @@ async function init(){
   info = await fetch(link);
   data = await info.json();
 }
-let map = undefined;
+let map = "";
 async function displayLocation(){
   let lat = document.getElementById("lat").value;
   let lon = document.getElementById("lon").value;
