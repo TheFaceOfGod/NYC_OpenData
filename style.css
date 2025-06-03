@@ -43,16 +43,19 @@ nav a:hover{
 	background-image:url(i/brickwall.jpeg);
 	background-repeat:no-repeat;
 	background-attachment:fixed;
+	background-size:cover;
 }
 #home2{
 	background-image:url(i/westartedthefire.jpg);
 	background-repeat:no-repeat;
 	background-attachment:fixed;
+	background-size:cover;
 }
 #home3{
 	background-image:url(i/firechart.jpg);
 	background-repeat:no-repeat;
 	background-attachment:fixed;
+	background-size:cover;
 }
 #map{
   flex:1;
