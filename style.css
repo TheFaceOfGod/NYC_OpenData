@@ -98,10 +98,6 @@ nav a:hover{
   margin:20px;
   box-shadow:2px 2px 2px gray;  
 }
-
-#output{
-  flex-wrap:wrap;
-}
 .fitted{
   max-width:200px;
   min-width:200px;
