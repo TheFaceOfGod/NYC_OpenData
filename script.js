@@ -32,9 +32,10 @@ function showMap(location){
     let c = data[i];
     if(c.alarm_box_borough = address){
       build += `<div class="fitted card">
-                  <h3>Borough: ${c.incident_borough}</h3>    
+                  <h3>Date: ${c.incident_datetime}</h3>    
                   <p>Incident: ${c.incident_classification}</p>
                   <h4>Location of alarm: ${c.alarm_box_location}</h4>
+                  <h4>Zipcode: ${c.zipcode}</h4>
                 </div>`;
     }
     output.innerHTML=build;
