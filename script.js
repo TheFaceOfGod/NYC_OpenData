@@ -1,4 +1,4 @@
-let data, info, build;
+let data, info;
 async function init(){
   let link = "https://data.cityofnewyork.us/resource/8m42-w767.json?$limit=1000";
   info = await fetch(link);
@@ -19,6 +19,7 @@ function showMap(location){
   let output = document.getElementById("output")
   let output2 = document.getElementById("output2")
   let address = document.getElementById("address")
+  let build = ""
   if (map) {
     map.remove();
   }
@@ -30,7 +31,7 @@ function showMap(location){
   let marker = L.marker(location).addTo(map);
   for(let i = 0; i < data.length; i++){
     let c = data[i];
-    if(c.alarm_box_borough = address){
+    if(c.alarm_box_borough == address){
       build += `<div class="fitted card">
                   <h3>Date: ${c.incident_datetime}</h3>    
                   <p>Incident: ${c.incident_classification}</p>
