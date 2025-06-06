@@ -44,7 +44,7 @@ function showMap(location){
   let marker = L.marker(location).addTo(map);
   for(let i = 0; i < data.length; i++){
     let c = data[i];
-    if(c.alarm_box_borough = address){
+    if(c.alarm_box_borough == address){
       build += `<div class="fitted card">
                   <h3>Date: ${c.incident_datetime}</h3>    
                   <p>Incident: ${c.incident_classification}</p>
