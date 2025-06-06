@@ -17,16 +17,17 @@ async function displayLocation(){
 }
 function help(){
   let output2 = document.getElementById("output2")
+  let build2 = ""
   for(let i = 0; i < data.length; i++){
     let c = data[i];
-    build += `<div class="fitted card">
+    build2 += `<div class="fitted card">
                 <h3>Date: ${c.incident_datetime}</h3>    
                 <p>Incident: ${c.incident_classification}</p>
                 <h4>Location of alarm: ${c.alarm_box_location}</h4>
                 <h4>Zipcode: ${c.zipcode}</h4>
               </div>`;
     }
-  output2.innerHTML=build;
+  output2.innerHTML=build2;
 }
 function showMap(location){	
   let output = document.getElementById("output")
