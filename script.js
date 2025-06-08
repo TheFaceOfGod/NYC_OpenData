@@ -63,7 +63,7 @@ const geocodeWithNominatim = async (address) => {
     const results = await response.json();
     if (results.length > 0) {
       const { lat, lon } = results[0];
-      console.log(`Latitude: ${lat}, Longitude: ${lon}`);Add commentMore actions
+      console.log(`Latitude: ${lat}, Longitude: ${lon}`);
       return [lat,lon];
     } else {
       console.log('No results found.');
