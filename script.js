@@ -6,8 +6,13 @@ async function init(){
 }
 let map = "";
 async function displayLocation(){
-  let location = await geocodeWithNominatim(address.value);
+  let lat = document.getElementById("lat").value;
+  let lon = document.getElementById("lon").value;
+  let location = [lat, lon];
   let address = document.getElementById("address").value;  
+  if(address.value != ""){
+    location = await geocodeWithNominatim(address.value);
+  }
   showMap(location);
 }
 function help(){
@@ -57,6 +62,9 @@ const geocodeWithNominatim = async (address) => {
     const response = await fetch(url);
     const results = await response.json();
     if (results.length > 0) {
+      const { lat, lon } = results[0];
+      console.log(`Latitude: ${lat}, Longitude: ${lon}`);Add commentMore actions
+      return [lat,lon];
     } else {
       console.log('No results found.');
     }
