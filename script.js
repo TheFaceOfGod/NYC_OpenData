@@ -25,7 +25,7 @@ function help(){
                 <p>Incident: ${c.incident_classification}</p>
                 <h4>Location of alarm: ${c.alarm_box_location}, ${c.incident_borough}</h4>
                 <h4>Zipcode: ${c.zipcode}</h4>
-              </div>`;
+              </div>`&nbsp;
   }
   output2.innerHTML=build2;
 }
