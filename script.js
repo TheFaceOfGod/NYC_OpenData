@@ -23,7 +23,7 @@ function help(){
     build2 += `<div class="fitted card">
                 <h3>Date: ${c.incident_datetime}</h3>    
                 <p>Incident: ${c.incident_classification}</p>
-                <h4>Location of alarm: ${c.alarm_box_location}</h4>
+                <h4>Location of alarm: ${c.alarm_box_location}, ${c.incident_borough}</h4>
                 <h4>Zipcode: ${c.zipcode}</h4>
               </div>`;
   }
