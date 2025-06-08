@@ -6,10 +6,10 @@ async function init(){
 }
 let map = "";
 async function displayLocation(){
+  let address = document.getElementById("address").value;  
   let lat = document.getElementById("lat").value;
   let lon = document.getElementById("lon").value;
   let location = [lat, lon];
-  let address = document.getElementById("address").value;  
   if(address != ""){
     location = await geocodeWithNominatim(address.value);
   }
