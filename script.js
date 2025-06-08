@@ -6,13 +6,8 @@ async function init(){
 }
 let map = "";
 async function displayLocation(){
-  let lat = document.getElementById("lat").value;
-  let lon = document.getElementById("lon").value;
-  let location = [lat, lon];
+  let location = await geocodeWithNominatim(address.value);
   let address = document.getElementById("address").value;  
-  if(address.value != ""){
-    location = await geocodeWithNominatim(address.value);
-  }
   showMap(location);
 }
 function help(){
@@ -52,7 +47,7 @@ function showMap(location){
                   <h4>Zipcode: ${c.zipcode}</h4>
                 </div>`;
     }
-    output.innerHTML=build;
+    output.innerHTML = build;
   }
 }     
 const geocodeWithNominatim = async (address) => {
@@ -62,9 +57,6 @@ const geocodeWithNominatim = async (address) => {
     const response = await fetch(url);
     const results = await response.json();
     if (results.length > 0) {
-      const { lat, lon } = results[0];
-      console.log(`Latitude: ${lat}, Longitude: ${lon}`);
-      return [lat,lon];
     } else {
       console.log('No results found.');
     }
