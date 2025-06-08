@@ -11,7 +11,7 @@ async function displayLocation(){
   let lon = document.getElementById("lon").value;
   let location = [lat, lon];
   if(address != ""){
-    location = await geocodeWithNominatim(address.value);
+    location = await geocodeWithNominatim(address);
   }
   showMap(location);
 }
@@ -31,7 +31,7 @@ function help(){
 }
 function showMap(location){	
   let output = document.getElementById("output")
-  let address = document.getElementById("address")
+  let address = document.getElementById("address").value
   let build = ""
   if (map) {
     map.remove();
@@ -73,7 +73,7 @@ const geocodeWithNominatim = async (address) => {
   }
 };
 function FireIncident(){
-  let bx = 0, br = 0, t = 0, q = 0, m = 0, si = 0;
+  let bx = 0, br = 0, q = 0, m = 0, si = 0;
   let a = document.getElementById("alarm").value;
   for( let i = 0; i < data.length; i++ ){
     if ( data[i].alarm_box_borough == "BRONX" && data[i].alarm_source_description_tx == a) {
